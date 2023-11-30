@@ -4,13 +4,17 @@ import FormStyle from "./formStyle";
 import PasswordInput from "../input/passwordInput";
 import ActionButton from "../button/Actionbutton";
 
-const LoginForm = () => {
+interface props {
+    callback: any;
+}
+
+const LoginForm = ({ callback }: props) => {
     return (
         <View style={FormStyle.login}>
             <EmailInput />
             <PasswordInput />
             <View style={FormStyle.button}>
-                <ActionButton text={"Entrar"} />
+                <ActionButton text={"Entrar"} callback={callback} />
             </View>
         </View>
     );

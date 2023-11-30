@@ -4,15 +4,14 @@ import White16Bold from "../label/white16Bold";
 
 interface props {
     text: string;
+    callback: any;
 }
 
-const ActionButton = ({ text }: props) => {
+const ActionButton = ({ text, callback }: props) => {
     return (
-        <View style={ButtonStyle.ActionButton}>
-            <TouchableOpacity>
-                <White16Bold text={text} />
-            </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={callback} style={ButtonStyle.ActionButton}>
+            <White16Bold text={text} />
+        </TouchableOpacity>
     );
 }
 

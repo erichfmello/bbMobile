@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const FormStyle = StyleSheet.create({
     login: {
@@ -8,8 +8,9 @@ const FormStyle = StyleSheet.create({
         gap: 8,
     },
     button: {
-        width: '100%',
+        width: Dimensions.get("window").width,
         alignItems: 'flex-end',
+        paddingRight: 24,
     }
 });
 

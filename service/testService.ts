@@ -3,7 +3,7 @@ import ApiService from "./baseService/apiService";
 
 export default class TestService {
     constructor(
-        private apiService: ApiService,
+        private apiService = new ApiService(),
     ) {
 
     }
