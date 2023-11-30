@@ -4,6 +4,7 @@ const VariablesStyle = StyleSheet.create({
     app: {
         flex: 1,
         backgroundColor: '#CCC',
+        display: 'flex',
     }
 
     // Background

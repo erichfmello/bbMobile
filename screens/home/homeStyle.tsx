@@ -1,17 +1,24 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 const HomeStyle = StyleSheet.create({
     homeContent: {
+        paddingLeft: 24,
+        paddingRight: 24,
+    },
+    component: {
+        height: Dimensions.get("window").height,
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    homeInner: {
         backgroundColor: '#FFF',
-        margin: 24,
-        marginTop: 104,
-        marginBottom: 104,
-        flex: 1,
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         borderWidth: 1,
         borderColor: '#2C1DFE',
         borderRadius: 10,
+        height: 480,
     },
     labelContent: {
         alignItems: 'flex-end',
