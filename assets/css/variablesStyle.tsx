@@ -1,11 +1,26 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 const VariablesStyle = StyleSheet.create({
     app: {
         flex: 1,
         backgroundColor: '#CCC',
         display: 'flex',
-    }
+    },
+    loaging: {
+        position: 'absolute',
+        backgroundColor: '#CCC',
+        opacity: 0.8,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height,
+    },
+    loagingImage: {
+        width: 50,
+        height: 50,
+        // transform: [{ rotate: '90deg' }]
+    },
 
     // Background
     // $backgroudPages: #FFF;
