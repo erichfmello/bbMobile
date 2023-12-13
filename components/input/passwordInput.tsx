@@ -2,17 +2,28 @@ import { useState } from 'react';
 import { Image, TextInput, TouchableOpacity, View } from "react-native";
 import InputStyle from "./inputStyle";
 
-const PasswordInput = () => {
-    const [isVisible, isVisibleSet] = useState<boolean>(true);
+interface props {
+    callback: any;
+}
 
+const PasswordInput = ({ callback }: props) => {
+    const [isVisible, isVisibleSet] = useState<boolean>(true);
+    const [text, textSet] = useState<string>('');
+    
     const changeVisibility = () => {
         isVisibleSet(!isVisible);
     }
+    
+    const changeText = (value: string): void => {
+        textSet(value);
+        callback(value);
+    }
+
 
     return (
         <View style={InputStyle.W320H32}>
             <Image source={require('../../assets/img/lock.png')} style={InputStyle.image16x16} />
-            <TextInput placeholder="Senha" style={InputStyle.textInput} secureTextEntry={isVisible} />
+            <TextInput placeholder="Senha" style={InputStyle.textInput} secureTextEntry={isVisible} value={text} onChangeText={(newValue: string) => changeText(newValue)} />
             <TouchableOpacity onPress={changeVisibility}>
                 {
                     isVisible ? (

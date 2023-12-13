@@ -19,8 +19,8 @@ const VariablesStyle = StyleSheet.create({
     loagingImage: {
         width: 50,
         height: 50,
-        // transform: [{ rotate: '90deg' }]
     },
+    
 
     // Background
     // $backgroudPages: #FFF;

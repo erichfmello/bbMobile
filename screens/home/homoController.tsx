@@ -1,22 +1,31 @@
-import TestService from "../../service/testService";
+import UserService from "../../service/userService";
 import bbLib from "../../types/bbLib";
-import { TestRequest, TestResponse } from "../../types/model";
+import { Screen } from "../../types/enums";
+import { User, UserLoginRequest, UserLoginResponse } from "../../types/model";
 
 export default class HomeController {
     constructor(
-        private testService = new TestService(),
+        private userService = new UserService(),
         private bb = new bbLib(),
     ) {
     }
 
-    public test(): void {
+    public login(user: User, navigation: any ): void {
         const self = this;
+        
+        let resquest: UserLoginRequest = new UserLoginRequest();
+        resquest.item = user;
         self.bb.showLoading();
+        self.userService.UserLogin(resquest)
+            .then((response: UserLoginResponse) => {
+                if (!response.success) {
+                    self.bb.showErrorMessage(response.message);
+                    return;
+                }
 
-        let resquest: TestRequest = new TestRequest();
-        self.testService.IsOnline(resquest)
-            .then((response: TestResponse) => {
-            }).catch((response: TestResponse) => {
+                self.bb.navigate(Screen.homeSystem, navigation);
+            }).catch((error: UserLoginResponse) => {
+                self.bb.showErrorMessage(error.message);
             }).finally(() => {
                 self.bb.hideLoading();
             });

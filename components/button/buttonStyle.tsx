@@ -10,6 +10,16 @@ const ButtonStyle = StyleSheet.create({
         justifyContent: "center",
         borderRadius: 5,
         marginEnd: 16,
+    },
+    CancelButton: {
+        backgroundColor: '#CCC',
+        width: 144,
+        height: 32,
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: "center",
+        borderRadius: 5,
+        marginEnd: 16,
     }
 });
 
