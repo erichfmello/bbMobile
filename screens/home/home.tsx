@@ -1,10 +1,9 @@
-import { View, ScrollView, Button } from "react-native";
+import { View, ScrollView } from "react-native";
 import HomeStyle from "./homeStyle";
 import Logo from "../../components/logo/logo";
 import LoginForm from "../../components/form/loginForm";
 import Black16W400 from "../../components/label/black16W400";
-import HomeController from "./homoController";
-import { User } from "../../types/model";
+import HomeController from "./homeController";
 
 const Home = ({ navigation }: any) => {
     const controller = new HomeController();

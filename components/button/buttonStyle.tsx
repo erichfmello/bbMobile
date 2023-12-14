@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const ButtonStyle = StyleSheet.create({
+const ButtonStyle = (isSelected: any) => StyleSheet.create({
     ActionButton: {
         backgroundColor: '#2C1DFE',
         width: 144,
@@ -20,6 +20,13 @@ const ButtonStyle = StyleSheet.create({
         justifyContent: "center",
         borderRadius: 5,
         marginEnd: 16,
+    },
+    IconButton: {
+        flex: 1,
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+        opacity: isSelected ? 0.4 : 1,
     }
 });
 

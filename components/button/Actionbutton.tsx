@@ -8,8 +8,10 @@ interface props {
 }
 
 const ActionButton = ({ text, callback }: props) => {
+    const isSelected: any = false;
+
     return (
-        <TouchableOpacity onPress={callback} style={ButtonStyle.ActionButton}>
+        <TouchableOpacity onPress={callback} style={ButtonStyle(isSelected).ActionButton}>
             <White16Bold text={text} />
         </TouchableOpacity>
     );

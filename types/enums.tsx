@@ -7,4 +7,5 @@ export enum UserTypeEnum {
 export enum Screen {
     home = 0,
     homeSystem = 1,
+    serieSystem = 2,
 }

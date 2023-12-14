@@ -8,8 +8,10 @@ interface props {
 }
 
 const CancelModalButton = ({ text, callback }: props) => {
+    const isSelected: any = false;
+
     return (
-        <TouchableOpacity onPress={callback} style={ButtonStyle.CancelButton}>
+        <TouchableOpacity onPress={callback} style={ButtonStyle(isSelected).CancelButton}>
             <Black16W400 text={text} />
         </TouchableOpacity>
     );

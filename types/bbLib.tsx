@@ -39,6 +39,9 @@ export default class bbLib {
             case Screen.homeSystem:
                 navigation.navigate('HomeSystem');
                 break;
+            case Screen.serieSystem:
+                navigation.navigate('SerieSystem');
+                break;
             default:
                 break;
         }
