@@ -10,6 +10,14 @@ const LabelStyle = StyleSheet.create({
         fontSize: 16,
         fontWeight: "400",
     },
+    black16Bold: {
+        fontSize: 16,
+        fontWeight: "bold",
+    },
+    black32Bold: {
+        fontSize: 32,
+        fontWeight: "bold",
+    },
 });
 
 export default LabelStyle;

@@ -10,7 +10,7 @@ const stack = createNativeStackNavigator();
 function Stack() {
     return (
         <NavigationContainer>
-            <stack.Navigator screenOptions={{ headerShown: false }}>
+            <stack.Navigator screenOptions={{ headerShown: false, animation: 'none' }}>
                 <stack.Screen name="Home" component={Home} />
                 <stack.Screen name="HomeSystem" component={HomeStystem} />
                 <stack.Screen name="SerieSystem" component={SerieStystem} />
